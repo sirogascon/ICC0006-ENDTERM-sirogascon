@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Aquí irá el juego.</p>
+  <div class="game-actions">
+    <ion-button size="small" (click)="pauseGame()">Pausar</ion-button>
+    <ion-button size="small" color="success" (click)="resumeGame()">Reanudar</ion-button>
+    <ion-button size="small" color="warning" (click)="restartGame()">Reiniciar</ion-button>
+  </div>
+
+  <div class="game-info">
+    <p>Puntuación: {{ score }}</p>
+    <p>Golpes: {{ hits }}/3</p>
+  </div>
+
+  <div id="game-container"></div>
 </ion-content>

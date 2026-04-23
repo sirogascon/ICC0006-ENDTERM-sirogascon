@@ -5,9 +5,13 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Fin de la partida.</p>
+  <p>Puntuación final: {{ finalScore }}</p>
 
   <ion-button expand="block" routerLink="/game">
     Reintentar
+  </ion-button>
+
+  <ion-button expand="block" color="medium" routerLink="/home">
+    Volver al inicio
   </ion-button>
 </ion-content>
