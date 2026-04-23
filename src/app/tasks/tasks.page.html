@@ -1,20 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Tareas</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-item *ngFor="let task of tasks">
+  <ion-label>
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.completed ? 'Completada' : 'Pendiente' }}</p>
+  </ion-label>
 
-<ion-content class="ion-padding">
-  <p *ngIf="loading">Cargando tareas...</p>
-
-  <ion-list *ngIf="!loading">
-    <ion-item *ngFor="let task of tasks">
-      <ion-label>
-        <h2>{{ task.title }}</h2>
-        <p [style.color]="task.completed ? 'lightgreen' : 'orange'">
-          {{ task.completed ? 'Completada' : 'Pendiente' }}
-        </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-</ion-content>
+  <ion-button slot="end" size="small" (click)="shareTask(task.title)">
+    Compartir
+  </ion-button>
+</ion-item>

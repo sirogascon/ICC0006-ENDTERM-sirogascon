@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { TasksService, Task } from '../tasks.service';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-tasks',
@@ -26,6 +27,14 @@ export class TasksPage implements OnInit {
         console.error('Error cargando tareas', error);
         this.loading = false;
       }
+    });
+  }
+
+  async shareTask(title: string): Promise<void> {
+    await Share.share({
+      title: 'Compartir tarea',
+      text: 'Tarea seleccionada: ' + title,
+      dialogTitle: 'Compartir tarea'
     });
   }
 }
