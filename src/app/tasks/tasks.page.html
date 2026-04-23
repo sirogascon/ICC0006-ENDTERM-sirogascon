@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <p>Aquí se mostrarán las tareas.</p>
+  <p *ngIf="loading">Cargando tareas...</p>
+
+  <ion-list *ngIf="!loading">
+    <ion-item *ngFor="let task of tasks">
+      <ion-label>
+        <h2>{{ task.title }}</h2>
+        <p [style.color]="task.completed ? 'lightgreen' : 'orange'">
+          {{ task.completed ? 'Completada' : 'Pendiente' }}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
