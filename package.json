@@ -24,6 +24,7 @@
     "@capacitor/cli": "^7.6.2",
     "@capacitor/share": "^8.0.1",
     "@ionic/angular": "^8.0.0",
+    "firebase": "^12.12.1",
     "ionicons": "^7.0.0",
     "phaser": "^4.0.0",
     "rxjs": "~7.8.0",
