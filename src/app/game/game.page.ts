@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import * as Phaser from 'phaser';
+import { ScoreService } from '../score.service';
 
 @Component({
   selector: 'app-game',
@@ -19,7 +20,8 @@ export class GamePage implements AfterViewInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private ngZone: NgZone
+    private ngZone: NgZone,
+    private scoreService: ScoreService
   ) {}
 
   ngAfterViewInit(): void {
@@ -162,6 +164,8 @@ export class GamePage implements AfterViewInit, OnDestroy {
 
             if (page.hits >= 3) {
               localStorage.setItem('finalScore', String(page.score));
+
+              page.scoreService.saveScore(page.score);
 
               page.ngZone.run(() => {
                 page.router.navigateByUrl('/game-over');
