@@ -48,6 +48,7 @@ export class GamePage implements AfterViewInit, OnDestroy {
 
       canSpawnTask = true;
       canSpawnObstacle = true;
+      isPaused = false;
 
       constructor() {
         super('main-scene');
@@ -97,6 +98,10 @@ export class GamePage implements AfterViewInit, OnDestroy {
           },
           loop: true
         });
+
+        this.input.keyboard?.on('keydown-P', () => {
+          this.isPaused = !this.isPaused;
+        });
       }
 
       spawnTask(): void {
@@ -112,6 +117,8 @@ export class GamePage implements AfterViewInit, OnDestroy {
       }
 
       override update(): void {
+        if (this.isPaused) return;
+        
         if (this.cursors.left?.isDown) {
           this.player.x -= 5;
         } else if (this.cursors.right?.isDown) {
