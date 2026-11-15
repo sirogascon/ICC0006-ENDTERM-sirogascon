@@ -34,6 +34,26 @@ Proyecto académico de la asignatura **Programación multimedia y dispositivos m
 - **JSONPlaceholder:** API REST para obtener tareas.
 - **Capacitor Share:** integración de la función de compartir.
 
+## Capturas de pantalla
+
+### Pantalla de inicio
+![Pantalla de inicio](docs/images/01-pantalla-inicio.png)
+
+### Listado de tareas
+![Tareas obtenidas de la API](docs/images/02-listado-tareas.png)
+
+### Compartir tareas
+![Función de compartir](docs/images/03-compartir-tareas.png)
+
+### Minijuego
+![Minijuego en funcionamiento](docs/images/04-minijuego.png)
+
+### Fin de partida
+![Pantalla Game Over](docs/images/05-game-over.png)
+
+### Almacenamiento en Firebase
+![Puntuaciones en Firebase](docs/images/06-firebase.png)
+
 ## Organización del proyecto
 
 El código principal se encuentra en `campus-quest/`.
