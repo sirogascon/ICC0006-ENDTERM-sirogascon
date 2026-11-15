@@ -37,16 +37,16 @@ Proyecto académico de la asignatura **Programación multimedia y dispositivos m
 ## Capturas de pantalla
 
 ### Pantalla de inicio
-![Pantalla de inicio](docs/images/01-pantalla-inicio.png)
+![Pantalla de inicio](docs/images/01-inicio.png)
 
 ### Listado de tareas
-![Tareas obtenidas de la API](docs/images/02-listado-tareas.png)
+![Tareas obtenidas de la API](docs/images/02-tareas.png)
 
 ### Compartir tareas
-![Función de compartir](docs/images/03-compartir-tareas.png)
+![Función de compartir](docs/images/03-compartir.png)
 
 ### Minijuego
-![Minijuego en funcionamiento](docs/images/04-minijuego.png)
+![Minijuego en funcionamiento](docs/images/04-juego.png)
 
 ### Fin de partida
 ![Pantalla Game Over](docs/images/05-game-over.png)
