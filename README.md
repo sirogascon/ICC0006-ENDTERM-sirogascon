@@ -1,56 +1,70 @@
 # Campus Quest
 
-Este proyecto es la entrega final de la asignatura de Programación multimedia y dispositivos móviles.
+Aplicación desarrollada con **Ionic, Angular y TypeScript** que combina la gestión de tareas obtenidas de una API externa con un minijuego interactivo creado mediante Phaser.
 
-La aplicación consiste en una app sencilla hecha con Ionic donde hay varias pantallas, una lista de tareas y un pequeño juego.
+Proyecto académico de la asignatura **Programación multimedia y dispositivos móviles**, del CFGS de Desarrollo de Aplicaciones Multiplataforma (DAM).
 
-## Que hace la aplicacion
+## Funcionalidades
 
-- Tiene una pantalla principal con el nombre del usuario.
-- Se puede navegar entre distintas pantallas.
-- Hay una pantalla de tareas que carga datos desde una API.
-- Se puede compartir una tarea usando el boton de compartir.
-- Incluye un juego simple hecho con Phaser.
+### Navegación y gestión de tareas
 
-En el juego:
+- Pantalla de inicio personalizada con el nombre del usuario.
+- Navegación entre las distintas secciones de la aplicación.
+- Consulta de tareas obtenidas mediante una API REST externa (JSONPlaceholder).
+- Posibilidad de compartir tareas mediante la funcionalidad de compartir del dispositivo.
 
-- El jugador se mueve de izquierda a derecha.
-- Caen cuadrados azules que suman puntos.
-- Caen cuadrados rojos que cuentan como golpes.
-- Al llegar a 3 golpes se termina la partida.
-- Se puede pausar, reanudar y reiniciar el juego.
-- La puntuacion se guarda en Firebase.
+### Minijuego interactivo
 
-## Tecnologias usadas
+- Juego desarrollado con Phaser e integrado en la aplicación Ionic.
+- Movimiento horizontal del jugador.
+- Objetos azules que permiten acumular puntos.
+- Objetos rojos que penalizan al jugador.
+- Finalización de la partida al recibir tres golpes.
+- Controles para pausar, reanudar y reiniciar.
+- Almacenamiento de puntuaciones mediante Firebase.
+- Pantalla de finalización de partida.
 
-- Ionic
-- Angular
-- TypeScript
-- Phaser
-- Firebase
-- API externa (JSONPlaceholder)
+## Tecnologías utilizadas
 
-## Como ejecutar el proyecto
+- **TypeScript:** lógica de la aplicación.
+- **Ionic 8:** componentes e interfaz de usuario.
+- **Angular 20:** estructura, navegación y servicios.
+- **Phaser:** desarrollo del minijuego.
+- **Firebase:** almacenamiento de puntuaciones.
+- **JSONPlaceholder:** API REST para obtener tareas.
+- **Capacitor Share:** integración de la función de compartir.
 
-Primero hay que instalar todo:
+## Organización del proyecto
 
+El código principal se encuentra en `campus-quest/`.
+
+La aplicación está organizada en pantallas y servicios, separando las responsabilidades de la interfaz, la obtención de tareas y la gestión de puntuaciones.
+
+Las principales pantallas son:
+
+- `home`: inicio de la aplicación.
+- `tasks`: consulta y compartición de tareas.
+- `game`: minijuego interactivo.
+- `game-over`: finalización de la partida.
+
+## Ejecución local
+
+**Requisitos:** Node.js, npm e Ionic CLI.
+
+Desde la raíz del repositorio:
+
+```bash
+cd campus-quest
 npm install
+npx ionic serve
+```
 
-Luego ejecutar la app:
+La aplicación se abrirá en el navegador local. Las funciones que dependen de Firebase requieren una configuración válida del servicio.
 
-ionic serve
+## Contexto académico
 
-Se abrira en el navegador normalmente en localhost.
+Proyecto final de la asignatura Programación multimedia y dispositivos móviles, desarrollado durante el CFGS de Desarrollo de Aplicaciones Multiplataforma.
 
-## Estructura
+El objetivo fue integrar navegación entre pantallas, consumo de servicios externos, funcionalidades del dispositivo y desarrollo de un videojuego dentro de una misma aplicación.
 
-- home: pantalla inicial
-- tasks: lista de tareas
-- game: juego
-- game-over: fin del juego
-
-Tambien hay servicios para las tareas y para guardar la puntuacion.
-
-## Notas
-
-El proyecto es sencillo pero cumple con lo que se pide. Se ha intentado hacer todo de forma clara y sin complicar demasiado las cosas.
+**Autor:** Siro Gascón Ogasawara
